@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.gmail.rastus2203</groupId>
   <artifactId>killStats</artifactId>
-  <version>0.1</version>
+  <version>1.0</version>
   <repositories>
     <repository>
       <id>spigot-repo</id>
