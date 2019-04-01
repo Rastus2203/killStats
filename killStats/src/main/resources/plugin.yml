@@ -1,0 +1,8 @@
+name: killStats
+main: com.gmail.rastus2203.killStats.killStats
+version: 0.1
+commands:
+   killstats:
+      description: Displays a users total kills, as well as kills on each individual player.
+      usage: /killstats [username]
+      permission: killstats.checkStats
