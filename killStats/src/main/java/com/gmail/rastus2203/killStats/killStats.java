@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -101,7 +102,7 @@ public final class killStats extends JavaPlugin implements Listener {
 			
 			catch (Exception a) {
 				//Player has no kills.
-				sender.sendMessage(name + " has no kills.");
+				sender.sendMessage(ChatColor.YELLOW + name + " has no kills.");
 				return true;
 			}	finally {}
 			
@@ -121,12 +122,13 @@ public final class killStats extends JavaPlugin implements Listener {
 			}
 			
 			//Tell the player how many kills the killer has made.
-			sender.sendMessage(name + " has killed " + totalKills + " players.");
+			sender.sendMessage(ChatColor.YELLOW + "Listing kill stats for " + name);
+			sender.sendMessage(ChatColor.YELLOW + "Total Kills: " + totalKills);
 			
 			//Iterates through all the players killed, sends this data to the player
 			for (Integer i = 0; i<killedUUIDs.size(); i++) {
 				String killedName = getConfig().getString("users." + uuid + ".playerKills." + killedUUIDs.get(i) + ".name");
-				sender.sendMessage(killedName + ": " + killedNumber.get(i).toString());
+				sender.sendMessage(ChatColor.YELLOW + killedName + ": " + killedNumber.get(i).toString());
 			}
 	
 			
